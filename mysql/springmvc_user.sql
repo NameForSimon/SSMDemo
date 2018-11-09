@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: changebook
+-- Host: localhost    Database: springmvc
 -- ------------------------------------------------------
 -- Server version	5.7.20
 
@@ -16,29 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `administrator`
+-- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `administrator`;
+DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `administrator` (
-  `aid` int(11) NOT NULL AUTO_INCREMENT,
-  `adminname` varchar(255) DEFAULT NULL,
-  `adminpassword` varchar(255) DEFAULT NULL,
-  `adminpublish` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+CREATE TABLE `user` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`uid`),
+  UNIQUE KEY `uid_UNIQUE` (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `administrator`
+-- Dumping data for table `user`
 --
 
-LOCK TABLES `administrator` WRITE;
-/*!40000 ALTER TABLE `administrator` DISABLE KEYS */;
-INSERT INTO `administrator` VALUES (1,'admin','admin','3'),(3,'simon','123',''),(4,'angel','angel',NULL),(6,'simon1','1','2'),(7,'123','123',NULL),(8,'3','3',NULL),(9,'433','324',NULL),(10,'456','4565',NULL);
-/*!40000 ALTER TABLE `administrator` ENABLE KEYS */;
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (7,'1','1'),(8,'2','3'),(9,'3','3'),(10,'4','6'),(11,'1','5'),(12,'2','3'),(13,'2','3'),(14,'4','5');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-09 16:48:50
+-- Dump completed on 2018-11-09 17:19:03

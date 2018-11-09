@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: changebook
+-- Host: localhost    Database: springmvc
 -- ------------------------------------------------------
 -- Server version	5.7.20
 
@@ -16,34 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `book`
+-- Table structure for table `employ`
 --
 
-DROP TABLE IF EXISTS `book`;
+DROP TABLE IF EXISTS `employ`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `book` (
-  `bid` int(11) NOT NULL AUTO_INCREMENT,
-  `bookname` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `news` varchar(255) DEFAULT NULL,
-  `bookaddress` varchar(255) DEFAULT NULL,
-  `bookphone` varchar(255) DEFAULT NULL,
-  `studentname` varchar(255) DEFAULT NULL,
-  `about` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`bid`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+CREATE TABLE `employ` (
+  `Id` int(11) NOT NULL,
+  `Salary` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `book`
+-- Dumping data for table `employ`
 --
 
-LOCK TABLES `book` WRITE;
-/*!40000 ALTER TABLE `book` DISABLE KEYS */;
-INSERT INTO `book` VALUES (19,'2','2','2','2','2','angel','青春','发布成功'),(23,'2','2','2','2','2','simon','青春','发布成功'),(24,'1','1','1','1','1','simon','青春','发布成功'),(25,'1','1','1','1','1','simon','青春','�����ɹ�');
-/*!40000 ALTER TABLE `book` ENABLE KEYS */;
+LOCK TABLES `employ` WRITE;
+/*!40000 ALTER TABLE `employ` DISABLE KEYS */;
+INSERT INTO `employ` VALUES (1,100),(2,200),(3,300);
+/*!40000 ALTER TABLE `employ` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-09 16:48:50
+-- Dump completed on 2018-11-09 17:19:03

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: changebook
+-- Host: localhost    Database: springmvc
 -- ------------------------------------------------------
 -- Server version	5.7.20
 
@@ -16,30 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user`
+-- Table structure for table `heights`
 --
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `heights`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user` (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `phone` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE `heights` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `gender` varchar(45) DEFAULT NULL,
+  `height` double DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `heights`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'simon','123','123','123'),(2,'angel','1028','和馨','10086');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `heights` WRITE;
+/*!40000 ALTER TABLE `heights` DISABLE KEYS */;
+INSERT INTO `heights` VALUES (1,'male',1.85),(2,'male',1.75),(3,'male',1.6),(4,'female',1.55),(5,'female',1.6),(6,'male',1.6),(7,'male',2.01),(8,'female',1.8);
+/*!40000 ALTER TABLE `heights` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-09 16:48:50
+-- Dump completed on 2018-11-09 17:19:03
